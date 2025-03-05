@@ -5,3 +5,6 @@ type: shield
 requires: [seeeduino_xiao_ble]
 features:
   - keys
+siblings:
+  - mame_left
+  - mame_right
