@@ -1,8 +1,21 @@
 #include "mame.dtsi"
 
-&kscan0{
+&kscan0 {
     col-gpios
-        = <&xiao_d  9 GPIO_ACTIVE_HIGH>
-        , <&xiao_d 10 GPIO_ACTIVE_HIGH>
+        = <&shifter 0 GPIO_ACTIVE_HIGH>
+        , <&shifter 1 GPIO_ACTIVE_HIGH>
         ;
+};
+
+&spi0 {
+    status = "okay";
+    shifter: 595@0 {
+        compatible = "zmk,gpio-595";
+        status = "okay";
+        gpio-controller;
+        spi-max-frequency = <200000>;
+        reg = <0>;
+        #gpio-cells = <2>;
+        ngpios = <8>;
+    };
 };
