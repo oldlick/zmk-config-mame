@@ -1,0 +1,4 @@
+if MAME
+config ZMK_KEYBOARD_NAME
+    default "Mame Keyboard"
+endif
