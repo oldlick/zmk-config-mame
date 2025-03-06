@@ -8,16 +8,20 @@
 
         default_layer {
             bindings = <
-                &kp A    &kp B
-                &mo 1    &kp D
+                &mo 1    &kp B   &kp C    &kp D
+                &mo 1    &kp E   &mo 2    &mo 2
             >;
         };
 
-        num_layer {
+        rgb_layer {
             bindings = <
-                &rgb_ug RGB_ON    &rgb_ug RGB_OFF
-                &rgb_ug RGB_EFF    &rgb_ug RGB_COLOR_HSB(128,100,100)
+                &rgb_ug RGB_ON    &rgb_ug RGB_OFF                    &rgb_ug RGB_ON    &rgb_ug RGB_OFF                   
+                &rgb_ug RGB_EFF   &rgb_ug RGB_COLOR_HSB(128,100,100) &rgb_ug RGB_EFF   &rgb_ug RGB_COLOR_HSB(128,100,100)
             >;
         };
     };
  };
+
+&led_strip {
+    chain-length = <16>;
+};

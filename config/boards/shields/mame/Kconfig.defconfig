@@ -1,4 +1,16 @@
-if MAME
+if MAME_LEFT
+
 config ZMK_KEYBOARD_NAME
     default "Mame Keyboard"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if MAME_LEFT || MAME_RIGHT
+
+config ZMK_SPLIT
+    default y
+
 endif

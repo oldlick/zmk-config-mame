@@ -1,2 +1,4 @@
-config MAME
-    def_bool $(shields_list_contains,mame)
+config MAME_LEFT
+    def_bool $(shields_list_contains,mame_left)
+config MAME_RIGHT
+    def_bool $(shields_list_contains,mame_right)
